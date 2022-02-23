@@ -1,7 +1,8 @@
 name: automerge
 on:
   push:
-    branches: [ main ]
+    branches:
+      - 'release/**'
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -11,6 +12,6 @@ jobs:
 
       # Runs a single command using the runners shell
       - name: Run a one-line script
-        uses: raulnq/git-flow-automerge@v0.1.0
+        uses: raulnq/git-flow-automerge@v0.2.0
         with:
-          milliseconds: 1000
+          github_token: ${{ secrets.REPO_SCOPED_TOKEN }}
