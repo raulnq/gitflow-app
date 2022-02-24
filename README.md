@@ -1,1 +1,1 @@
-# gitflow-app
+# gitflow-app-conflict
